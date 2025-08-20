@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criction - Secure Access</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(135deg, #007BFF, #00c6ff);
+      color: white;
+      padding: 50px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    main {
+      padding: 40px 20px;
+    }
+    main h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    input[type="password"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 250px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 12px 24px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #0056b3;
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      background: #222;
+      color: #ccc;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner -->
+  <header>
+    <h1>⚡ Criction</h1>
+    <p>The hassle-free way to run your cricket auction</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>🔒 Secure Access</h2>
+    <p>Please enter your access code (provided after payment):</p>
+
+    <input type="password" id="pass" placeholder="Enter Password">
+    <br>
+    <button onclick="checkPassword()">Unlock Auction</button>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    Made with ❤️ by <strong>Mangan Ray</strong>
+  </footer>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("pass").value;
+      const correctPassword = "mypass123"; // 👉 Change this password!
+
+      if (password === correctPassword) {
+        // Save flag in localStorage
+        localStorage.setItem("authenticated", "true");
+        // Redirect to auction page
+        window.location.href = "crictionbymangan.html";
+      } else {
+        alert("❌ Wrong password. Contact admin for access.");
+      }
+    }
+  </script>
+</body>
+</html>
